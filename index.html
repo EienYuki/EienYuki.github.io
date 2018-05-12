@@ -12,9 +12,9 @@
     <link href =“https://fonts.googleapis.com/css?family= Play ”rel =“stylesheet”>
     <link href="css/main.css" rel="stylesheet">
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
     <div class="central-A load"><img class="central-B" src="./img/Reload-1s-200px.svg" alt=""></div>
-    <div id="app" itemscope itemtype="http://schema.org/WebPage">
+    <div id="app">
         <nav>
             <div v-for="r in nav_item">
                 <a v-bind:data-index="r.index" v-on:click="nav_click(r.index)"><span>{{r.text}}</span></a>
