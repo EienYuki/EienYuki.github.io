@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="central-A load"><img class="central-B" src="./img/Reload-1s-200px.svg" alt=""></div>
-    <div id="app">
+    <div id="app" itemscope itemtype="http://schema.org/WebPage">
         <nav>
             <div v-for="r in nav_item">
                 <a v-bind:data-index="r.index" v-on:click="nav_click(r.index)"><span>{{r.text}}</span></a>
@@ -30,13 +30,13 @@
                 <div class="central-A content-B part1">
                     <div class="central-B">
                         <img src="./img/!練習56-5.png" alt="">
-                        <h2>EienYuki</h2>
+                        <h2 itemprop="name">EienYuki</h2>
                         <h3>midorin452@gmail.com</h3>
                         <div>
                             <a href="https://www.facebook.com/profile.php?id=100001002894512" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
                             <a href="https://github.com/EienYuki" target="_blank"><i class="fab fa-github fa-2x"></i></a>
                         </div>
-                        <p>
+                        <p itemprop="description">
                             喜歡寫程式、管理網路<br>
                             偶爾也會畫畫
                         </p>
