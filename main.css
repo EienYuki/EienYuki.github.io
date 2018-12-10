@@ -155,7 +155,7 @@ body .view .about .img img {
   border: 3px solid orange;
 }
 body .view .about .img h1, body .view .about .img h2 {
-  font-size: 1.2vw;
+  font-size: 1.2rem;
   margin-top: 1.5vh;
   text-align: center;
 }
