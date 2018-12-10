@@ -6,12 +6,21 @@ var sl = $('.slick-list').slick({
 	swipe: false
 })
 
-$("header nav .about").on('click', (e) => { sl.slick('slickGoTo', e.target.dataset.index) })
-$("header nav .graphics").on('click', (e) => { sl.slick('slickGoTo', e.target.dataset.index) })
-$("header nav .project").on('click', (e) => { sl.slick('slickGoTo', e.target.dataset.index) })
+$("header nav ul li").on('click', (e) => {
+	let name = e.target.className.split(" ")[0]
+	
+	$(".page").css("display", "inline-block")
+	$("header nav ul li").removeClass("current")
+	$(`.${name}`).addClass("current")
+	sl.slick('slickGoTo', e.target.dataset.index)
+	setTimeout(() => {
+		$(`.page`).css("display", "none")
+		$(`.page.${name}`).css("display", "inline-block")
+	}, 300)
+})
 
 $('.gallery .box').lightGallery({
 	download: false,
 	loop: false,
 	counter: false
-});
+})
