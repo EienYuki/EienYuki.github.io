@@ -6,16 +6,17 @@ var sl = $('.slick-list').slick({
 	swipe: false
 })
 
+let current = "about"
 $("header nav ul li").on('click', (e) => {
-	let name = e.target.className.split(" ")[0]
+	current = e.target.className.split(" ")[0]
 	
 	$(".page").css("display", "inline-block")
 	$("header nav ul li").removeClass("current")
-	$(`.${name}`).addClass("current")
+	$(`.${current}`).addClass("current")
 	sl.slick('slickGoTo', e.target.dataset.index)
 	setTimeout(() => {
 		$(`.page`).css("display", "none")
-		$(`.page.${name}`).css("display", "inline-block")
+		$(`.page.${current}`).css("display", "inline-block")
 	}, 300)
 })
 
