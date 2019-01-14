@@ -19,6 +19,7 @@ $("header nav ul li").on('click', (e) => {
 		$(`.page.${current}`).css("display", "inline-block")
 	}, 300)
 })
+$("header nav ul li.about").click()
 
 $('.gallery .box').lightGallery({
 	download: false,
