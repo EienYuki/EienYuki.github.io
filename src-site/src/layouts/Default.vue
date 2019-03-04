@@ -43,6 +43,9 @@ query {
 		font-display: fallback;
 	}
 
+	html {
+		overflow-x: hidden;
+	}
 	* {
 		margin: 0;
 		padding: 0;
