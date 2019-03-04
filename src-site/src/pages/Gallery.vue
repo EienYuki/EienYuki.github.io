@@ -1,8 +1,8 @@
 <template>
 	<Layout>
 		<div class="row item" id="lightgallery">
-			<a class="col-md-3" v-for="(item, index) in items" :key="index" :href="item.small">
-      			<img :src="item.raw" />
+			<a class="col-md-3" v-for="(item, index) in items" :key="index" :href="item.raw">
+      			<img :src="item.small" />
 				<p>{{item.text}}</p>
 			</a>
 		</div>

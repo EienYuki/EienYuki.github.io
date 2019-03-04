@@ -5,7 +5,7 @@
 				<div :key="index" class="col-md-3">
 					<div class="item">
 						<a :href="item.url" target="_blank">
-							<img :src="item.img" />
+							<img :src="item.img" :alt="item.msg" />
 							<p>{{item.text}}</p>
 						</a>
 						<p>{{item.msg}}</p>
