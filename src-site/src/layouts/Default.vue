@@ -12,7 +12,7 @@
 					a(href="https://github.com/EienYuki" target="_blank" rel="noopener")
 						img(src="/icons/GitHub-Mark-Light-32px.png", alt="GitHub-Mark-32px.png")
 			nav
-				ul(class="clearfix")
+				ul(class="container clearfix")
 					li
 						g-link(class="about" :to="{name: 'about'}") About
 					li
