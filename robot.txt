@@ -2,3 +2,4 @@ Allow: *.js*
 Allow: *.css*
 Allow: *.png*
 Allow: *.jpg*
+Disallow: /src-site/

@@ -3,7 +3,7 @@
 		header(class="row header")
 			div(class="box")
 				div(class="title")
-					h1 ゆきふわり
+					h1 {{$static.metaData.siteName}}
 				div(class="icons")
 					a(href="https://t.co/y4vEqPiXW9" target="_blank")
 						img(src="/icons/pixiv_icon.png", alt="pixiv_icon.png")
@@ -13,9 +13,9 @@
 						img(src="/icons/GitHub-Mark-Light-32px.png", alt="GitHub-Mark-32px.png")
 			nav
 				ul(class="clearfix")
-					g-link(class="about" :to="{name: 'about'}") about
-					g-link(class="gallery" :to="{name: 'gallery'}") gallery
-					g-link(class="project" :to="{name: 'project'}") project
+					g-link(class="about" :to="{name: 'about'}") About
+					g-link(class="gallery" :to="{name: 'gallery'}") Gallery
+					g-link(class="project" :to="{name: 'project'}") Project
 			div(class="bg")
 			
 		div(class="container view")
@@ -29,6 +29,16 @@ query {
   }
 }
 </static-query>
+
+<script>
+export default {
+	metaInfo: {
+		meta: [
+			{ key: 'theme-color', name: 'theme-color', content: '#ffa500' }
+		]
+	}
+}
+</script>
 
 <style lang="scss">
 	@import '../scss/color.scss';

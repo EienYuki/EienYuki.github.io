@@ -20,7 +20,10 @@
 
 	export default {
 		metaInfo: {
-			title: '我的專案'
+			title: '我的專案',
+			meta: [
+				{ key: 'description', name: 'description', content: `一些我參與過的專案` }
+			]
 		},
 		data () {
 			return {

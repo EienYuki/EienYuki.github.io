@@ -2,7 +2,7 @@
 	<Layout>
 		<div class="row item" id="lightgallery">
 			<a class="col-md-3" v-for="(item, index) in items" :key="index" :href="item.raw">
-      			<img :src="item.small" />
+      			<img :src="item.small" :alt="item.text" />
 				<p>{{item.text}}</p>
 			</a>
 		</div>
@@ -14,7 +14,10 @@
 
 	export default {
 		metaInfo: {
-			title: '我的畫'
+			title: '我的畫',
+			meta: [
+				{ key: 'description', name: 'description', content: `一些我畫的圖` }
+			]
 		},
 		mixins: [mIightgallery],
 		data () {

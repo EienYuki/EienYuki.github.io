@@ -2,23 +2,22 @@
 	Layout
 		div(class="row")
 			div(class="col-md-3 box img")
-				img(src="/img/!練習56-5.jpg" alt="")
-				h1 永遠ゆき
+				img(src="/img/!練習56-5.jpg" alt="大頭貼")
+				h1 ゆきふわり
 				h2 midorin452@gmail.com
+				p 對未來感到迷惘 啊啊啊～
 			div(class="col-md-9 box text")
-				p
-					| 冬は寒いけど
-					br
-					| でも家にいるなら、温かいを感じられる
-					br
-					| 私はそれが好き
+				p 啊不知道要打什麼 ((被打
 </template>
 
 
 <script>
 export default {
 	metaInfo: {
-		title: '關於我'
+		title: '關於我',
+		meta: [
+			{ key: 'description', name: 'description', content: '我的自我介紹' }
+		]
 	},
 	mounted () {
 		document.querySelector('nav ul a.about').classList.add('current')
@@ -32,6 +31,7 @@ export default {
 	.img {
 		width: 70%;
 		margin: 0 auto;
+		text-align: center;
 		img {
 			width: 80%;
 			margin: 5% 0% 5% 10%;
@@ -41,7 +41,6 @@ export default {
 		h1, h2 {
 			font-size: 1.2rem;
 			margin-top: 1.5vh;
-			text-align: center;
 		}
 	}
 	.text {
