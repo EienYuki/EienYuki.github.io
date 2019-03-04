@@ -67,6 +67,7 @@ export default {
 		header {
 			position: relative;
 			background-color: rgb(63, 63, 63);
+			margin: 0 !important;
 
 			.bg {
 				position: absolute;

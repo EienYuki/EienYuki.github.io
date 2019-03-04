@@ -30,11 +30,11 @@ export default {
 	
 	.img {
 		width: 70%;
-		margin: 0 auto;
+		margin: 0 auto 3% auto;
 		text-align: center;
 		img {
 			width: 80%;
-			margin: 5% 0% 5% 10%;
+			margin: 5%;
 			border-radius: 100%;
 			border: 3px solid $color_line;
 		}
