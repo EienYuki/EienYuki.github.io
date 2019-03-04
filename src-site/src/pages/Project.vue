@@ -4,7 +4,7 @@
 			<template v-for="(item, index) in items">
 				<div :key="index" class="col-md-3">
 					<div class="item">
-						<a :href="item.url" target="_blank">
+						<a :href="item.url" target="_blank" rel="noopener">
 							<img :src="item.img" :alt="item.msg" />
 							<p>{{item.text}}</p>
 						</a>
