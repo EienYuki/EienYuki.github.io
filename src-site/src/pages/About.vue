@@ -28,7 +28,6 @@
 			})]
 		},
 		mounted () {
-			window.test = this
 			document.querySelector('nav ul a.about').classList.add('current')
 		}
 }
