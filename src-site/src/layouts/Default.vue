@@ -177,13 +177,22 @@ export default {
 					}
 				}
 				a {
+					color: $color_text_title;
+					border-radius: 8px;
+					padding: 1rem 0 0 0;
+					border: 0 solid #ffdcb2;
+					transition: border .2s ease-in-out;
+					&:hover {
+						color: $color_text_title_deep;
+						border: 1px solid #ffdcb2;
+					}
 					p {
-						padding: 10px 10% 10px 12%;
+						padding: 10px 0 0px 6%;
 					}
 					p.msg {
-						color: black;
+						color: $color_text_p;
 						padding: 0;
-						margin-left: 5%;	
+    					margin-left: 10%;	
 					}
 				}
 				p {

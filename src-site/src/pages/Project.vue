@@ -1,17 +1,11 @@
 <template>
 	<Layout>
-		<div class="row">
-			<template v-for="(item, index) in items">
-				<div :key="index" class="col-md-3">
-					<div class="item">
-						<a :href="item.url" target="_blank" rel="noopener">
-							<g-image :src="require(`!!assets-loader!~/asstes/${item.img}`)" blur="200" :alt="item.msg" />
-							<p>{{item.text}}</p>
-						</a>
-						<p>{{item.msg}}</p>
-					</div>
-				</div>
-			</template>
+		<div class="row item">
+			<a class="col-md-3" v-for="(item, index) in items" :key="index" :href="item.url" target="_blank" rel="noopener">
+				<g-image :src="require(`!!assets-loader!~/asstes/${item.img}`)" blur="200" :alt="item.msg" />
+				<p>{{item.text}}</p>
+				<p class="msg">{{item.msg}}</p>
+			</a>
 		</div>
 	</Layout>
 </template>
