@@ -38,7 +38,14 @@ query {
 export default {
 	metaInfo: {
 		meta: [
-			{ key: 'theme-color', name: 'theme-color', content: '#ffa500' }
+			{ key: 'theme-color', name: 'theme-color', content: '#ffa500' },
+
+			{ key: 'Schema_img', itemprop: 'image', content: require(`!!assets-loader!~/asstes/about/練習56-5.jpg`).src },
+
+			{ key: 'fb_img', property: 'og:image', content: require(`!!assets-loader!~/asstes/about/練習56-5.jpg`).src },
+			
+			{ key: 'twitter_img', name: 'twitter:image', content: require(`!!assets-loader!~/asstes/about/練習56-5.jpg`).src },
+			{ key: 'twitter_site', name: 'twitter:site', content: '@yuki_01957' }
 		]
 	}
 }
