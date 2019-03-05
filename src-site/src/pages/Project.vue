@@ -5,7 +5,7 @@
 				<div :key="index" class="col-md-3">
 					<div class="item">
 						<a :href="item.url" target="_blank" rel="noopener">
-							<img :src="item.img" :alt="item.msg" />
+							<g-image :src="require(`!!assets-loader!~/asstes/${item.img}`)" :alt="item.msg" />
 							<p>{{item.text}}</p>
 						</a>
 						<p>{{item.msg}}</p>
@@ -29,7 +29,7 @@
 			return {
 				items: [
 					{
-						img: '/img/small/Best Predict.jpg',
+						img: 'project/Best_Predict.jpg',
 						url: 'https://http-172-17-11-0-3000.itsrv.work/home',
 						text: 'Best Predict',
 						msg: '這是學校的畢業專題 一共有5人'

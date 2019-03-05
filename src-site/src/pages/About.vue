@@ -2,7 +2,7 @@
 	Layout
 		div(class="row")
 			div(class="col-md-3 box img")
-				img(src="/img/!練習56-5.jpg" alt="大頭貼")
+				g-image(:src="require(`!!assets-loader!~/asstes/about/練習56-5.jpg`)" alt="大頭貼")
 				h1 ゆきふわり
 				h2 midorin452@gmail.com
 				p 對未來感到迷惘 啊啊啊～
