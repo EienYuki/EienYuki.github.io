@@ -11,14 +11,14 @@
 </template>
 
 <script>
-
+	import myMeta from '~/mixin/meta.js'
+	
 	export default {
 		metaInfo: {
 			title: '我的專案',
-			meta: [
-				{ key: 'description', name: 'description', content: `一些我參與過的專案` }
-			]
+			meta: []
 		},
+		mixins: [myMeta],
 		data () {
 			return {
 				items: [
@@ -43,8 +43,12 @@
 				]
 			}
 		},
-		methods: {
-			
+		created () {
+			this.$options.metaInfo.meta = [...this.$options.metaInfo.meta, ...this.generateMeta({
+				title: '我的專案',
+				description: '一些我參與過的專案',
+				image: require(`!!assets-loader!~/asstes/about/練習56-5.jpg`).src
+			})]
 		},
 		mounted () {
 			document.querySelector('nav ul a.project').classList.add('current')

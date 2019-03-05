@@ -12,16 +12,25 @@
 
 
 <script>
-export default {
-	metaInfo: {
-		title: '關於我',
-		meta: [
-			{ key: 'description', name: 'description', content: '我的自我介紹' }
-		]
-	},
-	mounted () {
-		document.querySelector('nav ul a.about').classList.add('current')
-	}
+	import myMeta from '~/mixin/meta.js'
+
+	export default {
+		metaInfo: {
+			title: '關於我',
+			meta: []
+		},
+		mixins: [myMeta],
+		created () {
+			this.$options.metaInfo.meta = [...this.$options.metaInfo.meta, ...this.generateMeta({
+				title: '關於我',
+				description: '我的自我介紹 現在不知道要打什麼 ((被打',
+				image: require(`!!assets-loader!~/asstes/about/練習56-5.jpg`).src
+			})]
+		},
+		mounted () {
+			window.test = this
+			document.querySelector('nav ul a.about').classList.add('current')
+		}
 }
 </script>
 

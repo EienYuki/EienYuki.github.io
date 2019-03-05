@@ -11,16 +11,15 @@
 </template>
 
 <script>
+	import myMeta from '~/mixin/meta.js'
 	import mIightgallery from '~/mixin/mIightgallery.js'
 
 	export default {
 		metaInfo: {
 			title: '我的畫',
-			meta: [
-				{ key: 'description', name: 'description', content: `一些我畫的圖` }
-			]
+			meta: []
 		},
-		mixins: [mIightgallery],
+		mixins: [myMeta, mIightgallery],
 		data () {
 			return {
 				items: [
@@ -48,8 +47,12 @@
 				]
 			}
 		},
-		methods: {
-			
+		created () {
+			this.$options.metaInfo.meta = [...this.$options.metaInfo.meta, ...this.generateMeta({
+				title: '我的畫',
+				description: '一些我畫的圖',
+				image: require(`!!assets-loader!~/asstes/about/練習56-5.jpg`).src
+			})]
 		},
 		mounted () {
 			document.querySelector('nav ul a.gallery').classList.add('current')
