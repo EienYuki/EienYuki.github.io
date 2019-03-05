@@ -22,7 +22,8 @@
 			div(class="bg")
 			
 		div(class="container view")
-			slot
+			transition(name="fade" appear)
+				slot
 </template>
 
 <static-query>
@@ -54,6 +55,14 @@ export default {
 			url(https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff) format('woff'),
 			url(https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.otf) format('opentype');
 		font-display: fallback;
+	}
+
+	.fade-enter-active {
+		transition: opacity .4s;
+	}
+
+	.fade-enter {
+		opacity: 0;
 	}
 
 	html {

@@ -6,7 +6,14 @@
 
 module.exports = {
   siteName: 'ゆきふわり',
-  plugins: [],
+  plugins: [
+	{
+		use: '@gridsome/plugin-google-analytics',
+		options: {
+		  	id: 'UA-79576800-2'
+		}
+	}
+  ],
   chainWebpack: config => {
     config.module
       .rule('pug')

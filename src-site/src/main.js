@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   head.htmlAttrs = { lang: 'zh-Hant-TW' }
+  //console.log(head)
   Vue.component('Layout', DefaultLayout)
 
 }
