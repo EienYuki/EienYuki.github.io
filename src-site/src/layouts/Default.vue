@@ -180,6 +180,11 @@ export default {
 					p {
 						padding: 10px 10% 10px 12%;
 					}
+					p.msg {
+						color: black;
+						padding: 0;
+						margin-left: 5%;	
+					}
 				}
 				p {
 					margin-left: 5%;

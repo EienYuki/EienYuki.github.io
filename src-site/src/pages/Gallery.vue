@@ -1,9 +1,10 @@
 <template>
 	<Layout>
-		<div class="row item" id="lightgallery">
-			<a class="col-md-3" v-for="(item, index) in items" :key="index" :href="require(`!!assets-loader!~/asstes/${item.img}`).src">
-				<g-image :src="require(`!!assets-loader!~/asstes/${item.img}`)" :alt="item.text" />
+		<div class="row item lightgallery">
+			<a v-for="(item, index) in items" class="col-md-3" :key="index" :href="require(`!!assets-loader!~/asstes/${item.img}`).src">
+				<g-image :src="require(`!!assets-loader!~/asstes/${item.img}`)" blur="200" :alt="item.text" />
 				<p>{{item.text}}</p>
+				<p class="msg" v-if="item.msg">{{item.msg}}</p>
 			</a>
 		</div>
 	</Layout>
@@ -30,6 +31,19 @@
 					{
 						img: 'gallery/練習73-4-out.png',
 						text: 'マキア'
+					},
+					{
+						img: 'gallery/練習75-3.10.png',
+						text: '森林中的少女?'
+					},
+					{
+						img: 'gallery/練習84.13.png',
+						text: '2019 新年賀圖'
+					},
+					{
+						img: 'gallery/練習88.5.png',
+						text: '無題',
+						msg: '啊我不會畫狗QQ'
 					}
 				]
 			}
@@ -45,4 +59,8 @@
 
 <style lang="scss">
 	@import '~lightgallery.js/dist/css/lightgallery.min.css';
+
+	body .view .item {
+		float: unset !important;
+	}
 </style>

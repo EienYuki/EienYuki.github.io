@@ -2,12 +2,14 @@ export default {
 	methods: {
 		lightGalleryInit () {
 			require('lightgallery.js')
-			lightGallery(document.getElementById('lightgallery'), {
-				thumbnail: true,
-				animateThumb: true,
-				counter: false,
-				download: false	
-			})
+			for (const iterator of document.getElementsByClassName('lightgallery')) {
+				lightGallery(iterator, {
+					thumbnail: true,
+					animateThumb: true,
+					counter: false,
+					download: true	
+				})	
+			}
 		}
 	},
 	mounted () {
