@@ -25,11 +25,13 @@
 				items: [
 					{
 						img: 'gallery/練習56-5-out.png',
-						text: '柚ちゃん'
+						text: '柚ちゃん',
+						msg: '第一次PO的圖'
 					},
 					{
 						img: 'gallery/練習73-4-out.png',
-						text: 'マキア'
+						text: 'マキア',
+						msg: '我一定要找個時間來重畫...'
 					},
 					{
 						img: 'gallery/練習75-3.10.png',
