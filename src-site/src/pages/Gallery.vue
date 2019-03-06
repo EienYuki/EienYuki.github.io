@@ -62,8 +62,4 @@
 
 <style lang="scss">
 	@import '~lightgallery.js/dist/css/lightgallery.min.css';
-
-	body .view .item {
-		float: unset !important;
-	}
 </style>

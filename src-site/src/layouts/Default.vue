@@ -24,6 +24,12 @@
 		div(class="container view")
 			transition(name="fade" appear)
 				slot
+		
+		footer
+			div(class="text")
+				p Copyright © 2019 by EienYuki.
+			div(class="bg")
+		
 </template>
 
 <static-query>
@@ -79,7 +85,7 @@ export default {
 		
 		header {
 			position: relative;
-			background-color: rgb(63, 63, 63);
+			background-color: $color_footer_background;
 			margin: 0 !important;
 
 			.bg {
@@ -87,10 +93,13 @@ export default {
 				width: 100%;
 				height: 100%;
 				opacity: .5;
-				background: url('/img/star2.png')
+				overflow: hidden;
+				background-image: url('/img/練習84.Banner.jpg');
+				background-size: cover;
+				background-repeat: no-repeat;
 			}
 			.box {
-				margin: 4vh auto 0 auto;
+				margin: 4vh auto;
 				z-index: 10;
 
 				.title {
@@ -118,12 +127,17 @@ export default {
 				width: 100%;
 				margin-top: 50px;
 				z-index: 10;
+				background: -webkit-linear-gradient(rgba(0,0,0,0),$color_nav_background);
+				background: -o-linear-gradient(rgba(0,0,0,0),$color_nav_background);
+				background: -moz-linear-gradient(rgba(0,0,0,0),$color_nav_background);
+				background: linear-gradient(rgba(0,0,0,0),$color_nav_background);
 				@media (max-width: 900px){
 					margin-top: 40px;
 				}
 
 				ul {
 					margin-left: 10%;
+					padding-top: 10px;
 
 					a:hover {
 						color: unset;
@@ -161,11 +175,33 @@ export default {
 			}
 		}
 
+		footer {
+			height: 12vh;
+			background-color: $color_footer_background;
+			position: relative;
+
+			.text {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				color: $color_footer_light;
+			}
+			.bg {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				opacity: .5;
+				background: url('/img/star2.png')
+			}
+		}
+
 		.view {
 			padding-top: 15px;
 
 			.item {
-				float: left;
 				padding: 0 0 3vh 0;
 
 				img {
