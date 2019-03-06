@@ -226,6 +226,31 @@ query {
 			.item {
 				padding: 0 0 3vh 0;
 
+				&.item-badge {
+					padding: 3vh;
+
+					.box {
+						.left {
+							position: relative;
+							padding-right: 0;
+							
+							.img {
+								position: absolute;
+								width: 70%;
+								top: 50%;
+								left: 60%;
+								transform: translate(-50%, -50%);
+							}
+						}
+						.right {
+							padding-left: 0;
+							p.msg {
+								padding: 0;
+							}
+						}
+					}
+				}
+
 				img {
 					width: 90%;
 					margin-left: 5%;
@@ -245,7 +270,7 @@ query {
 						border: 1px solid #ffdcb2;
 					}
 					p {
-						padding: 10px 0 0px 11%;
+						padding: 10px 11% 0px 11%;
 					}
 					p.msg {
 						color: $color_text_p;
