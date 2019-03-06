@@ -25,6 +25,8 @@
 			transition(name="fade" appear)
 				slot
 		
+		GoTop(:size="60")
+
 		footer
 			div(class="text")
 				p Copyright © 2019 by EienYuki.
@@ -41,13 +43,18 @@ query {
 </static-query>
 
 <script>
-export default {
-	metaInfo: {
-		meta: [
-			{ key: 'theme-color', name: 'theme-color', content: '#ffa500' }
-		]
+	import GoTop from '@inotom/vue-go-top';
+
+	export default {
+		metaInfo: {
+			meta: [
+				{ key: 'theme-color', name: 'theme-color', content: '#ffc966' }
+			]
+		},
+		components: {
+			GoTop
+		}
 	}
-}
 </script>
 
 <style lang="scss">
@@ -85,7 +92,7 @@ export default {
 		
 		header {
 			position: relative;
-			background-color: $color_footer_background;
+			background-color: $color_nav_sidebar;
 			margin: 0 !important;
 
 			.bg {
@@ -127,10 +134,12 @@ export default {
 				width: 100%;
 				margin-top: 50px;
 				z-index: 10;
-				background: -webkit-linear-gradient(rgba(0,0,0,0),$color_nav_background);
-				background: -o-linear-gradient(rgba(0,0,0,0),$color_nav_background);
-				background: -moz-linear-gradient(rgba(0,0,0,0),$color_nav_background);
-				background: linear-gradient(rgba(0,0,0,0),$color_nav_background);
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,000000+100&0+0,0.65+100 */
+				background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, $color_nav_background 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,$color_nav_background 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,$color_nav_background 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+				
 				@media (max-width: 900px){
 					margin-top: 40px;
 				}
@@ -220,7 +229,6 @@ export default {
 					border: 0 solid #ffdcb2;
 					transition: border .2s ease-in-out;
 					&:hover {
-						color: $color_text_title_deep;
 						border: 1px solid #ffdcb2;
 					}
 					p {
