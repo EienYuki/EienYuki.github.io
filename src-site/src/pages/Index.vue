@@ -44,7 +44,8 @@
 					{text: 'XROUND', msg: '看動畫超有感', img: 'https://res.cloudinary.com/cakeresume/image/upload/s--udQPV91i--/c_pad,fl_png8,h_400,w_400/v1491979865/q3yft0dzmsnykqiaac2z.png', url: 'https://www.xround.co/'},
 					{text: 'Clip Studio Paint', msg: '太多好用的工具惹', img: 'https://www.macupdate.com/images/icons256/32454.png', url: 'https://www.clipstudio.net/'},
 					{text: 'NextCloud', msg: '強大的檔案分享系統！', img: 'https://nextcloud.com/wp-content/themes/next/assets/img/common/nextcloud-square-logo.png?x38529', url: 'https://nextcloud.com/'},
-					{text: 'Cloudflare', msg: '好用的CDN服務', img: 'https://www.cloudflare.com/img/cf-facebook-card.png', url: 'https://www.cloudflare.com/'},
+					{text: 'CloudFlare', msg: '好用的CDN服務', img: 'https://www.cloudflare.com/img/cf-facebook-card.png', url: 'https://www.cloudflare.com/'},
+					{text: 'Proxmox VE', msg: '超好用的虛擬機系統', img: 'http://www.unixsamurai.com/wp-content/uploads/2018/06/proxmox-logo.png', url: 'https://www.proxmox.com/'},
 					
 				]
 			}
