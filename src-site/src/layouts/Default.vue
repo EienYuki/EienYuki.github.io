@@ -19,6 +19,8 @@
 						g-link(class="gallery" :to="{name: 'gallery'}") Gallery
 					li
 						g-link(class="project" :to="{name: 'project'}") Project
+					li
+						g-link(class="test" :to="{name: 'test'}") Test
 			div(class="bg")
 			
 		div(class="container view")
