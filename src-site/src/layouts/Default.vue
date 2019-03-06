@@ -24,9 +24,7 @@
 		div(class="container view")
 			transition(name="fade" appear)
 				slot
-		
-		GoTop(:size="60")
-
+				
 		footer
 			div(class="text")
 				p Copyright © 2019 by EienYuki.
@@ -43,17 +41,15 @@ query {
 </static-query>
 
 <script>
-	import GoTop from '@inotom/vue-go-top';
-
 	export default {
 		metaInfo: {
 			meta: [
 				{ key: 'theme-color', name: 'theme-color', content: '#ffc966' }
 			]
 		},
-		components: {
-			GoTop
-		}
+		mounted () {
+			
+		},
 	}
 </script>
 
@@ -70,6 +66,21 @@ query {
 		font-display: fallback;
 	}
 
+	::-webkit-scrollbar-track
+	{
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+		background-color: #F5F5F5;
+	}
+	::-webkit-scrollbar
+	{
+		width: 6px;
+		background-color: #F5F5F5;
+	}
+	::-webkit-scrollbar-thumb
+	{
+		background-color: rgba(0,0,0,0.15);
+	}
+	
 	.fade-enter-active {
 		transition: opacity .4s;
 	}
