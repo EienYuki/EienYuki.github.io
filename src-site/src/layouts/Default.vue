@@ -19,7 +19,7 @@
 						g-link(class="gallery" :to="{name: 'gallery'}") Gallery
 					li
 						g-link(class="project" :to="{name: 'project'}") Project
-			div(class="bg")
+			div(class="sidebar")
 			
 		div(class="container view")
 			transition(name="fade" appear)
@@ -100,22 +100,24 @@ query {
 
 	body {
 		width: 100vw;
+		overflow-x: hidden;
 		
 		header {
 			position: relative;
-			background-color: $color_nav_sidebar;
 			margin: 0 !important;
+			
+			background-image: url('/img/練習84.Banner.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
 
-			.bg {
+			.sidebar {
 				position: absolute;
-				width: 100%;
+				width: 100vw;
 				height: 100%;
-				opacity: .5;
-				overflow: hidden;
-				background-image: url('/img/練習84.Banner.jpg');
-				background-size: cover;
-				background-repeat: no-repeat;
+				background-color: $color_nav_sidebar;
+				opacity: .2;
 			}
+
 			.box {
 				margin: 4vh auto;
 				z-index: 10;
