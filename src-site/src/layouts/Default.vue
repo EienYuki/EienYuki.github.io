@@ -75,7 +75,8 @@ export default {
 	}
 
 	body {
-
+		width: 100vw;
+		
 		header {
 			position: relative;
 			background-color: rgb(63, 63, 63);
