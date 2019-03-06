@@ -245,16 +245,12 @@ query {
 						border: 1px solid #ffdcb2;
 					}
 					p {
-						padding: 10px 0 0px 6%;
+						padding: 10px 0 0px 11%;
 					}
 					p.msg {
 						color: $color_text_p;
-						padding: 0;
-    					margin-left: 10%;	
+						padding: 0 11%;
 					}
-				}
-				p {
-					margin-left: 5%;
 				}
 
 				a:hover {

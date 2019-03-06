@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<div class="row item lightgallery">
-			<a v-for="(item, index) in items" class="col-md-3" :key="index" :href="require(`!!assets-loader!~/asstes/${item.img}`).src">
+			<a v-for="(item, index) in items" class="col-lg-3 col-md-4" :key="index" :href="require(`!!assets-loader!~/asstes/${item.img}`).src">
 				<g-image :src="require(`!!assets-loader!~/asstes/${item.img}`)" blur="200" :alt="item.text" />
 				<p>{{item.text}}</p>
 				<p class="msg" v-if="item.msg">{{item.msg}}</p>
