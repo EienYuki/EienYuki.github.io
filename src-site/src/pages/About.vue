@@ -14,7 +14,7 @@
 				p 總之先來個 推坑清單？
 
 				div(class="row item item-badge")
-					a(class="col-sm-4 box" v-for="(item, index) in items" :key="index" :href="item.url" target="_blank" rel="noopener")
+					a(class="col-lg-4 col-md-6 col-sm-6 box" v-for="(item, index) in items" :key="index" :href="item.url" target="_blank" rel="noopener")
 						div(class="row")
 							div(class="col-4 left")
 								div(class="img")
