@@ -1,0 +1,4 @@
+Allow: *.js*
+Allow: *.css*
+Allow: *.png*
+Allow: *.jpg*
