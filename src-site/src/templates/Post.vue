@@ -38,6 +38,7 @@ query Post ($path: String!) {
 					title: this.$page.post.title,
 					description: this.$page.post.msg,
 					image: this.$page.post.image,
+					image_model: 'static'
 				})
 			}
 		},

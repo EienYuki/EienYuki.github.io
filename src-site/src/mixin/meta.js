@@ -1,7 +1,8 @@
 export default {
 	methods: {
-		generateMeta ({og_type, title, description, image, url}) {
+		generateMeta ({og_type, title, description, image, url, image_model}) {
 			let base = 'https://me.asutora.com'
+			if (image_model == 'static') base = ''
 			let out = []
 			
 			if (description) out.push( { key: 'description', name: 'description', content: description } )
