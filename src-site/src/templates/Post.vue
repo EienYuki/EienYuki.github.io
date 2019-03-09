@@ -38,8 +38,7 @@ query Post ($path: String!) {
 				meta: this.generateMeta({
 					title: this.$page.post.title,
 					description: this.$page.post.msg,
-					image: this.$page.post.image,
-					image_model: 'static'
+					image: require(`!!assets-loader!~/asstes/blog/${this.$page.post.slug}/${this.$page.post.image}`).src,
 				})
 			}
 		},
