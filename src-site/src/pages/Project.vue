@@ -3,7 +3,7 @@
 		<div class="row item">
 			<a class="col-lg-3 col-md-4" v-for="(item, index) in items" :key="index" :href="item.url" target="_blank" rel="noopener">
 				<g-image :src="require(`!!assets-loader!~/asstes/${item.img}`)" blur="200" :alt="item.msg" />
-				<p>{{item.text}}</p>
+				<h3 class="title">{{item.text}}</h3>
 				<p class="msg">{{item.msg}}</p>
 			</a>
 		</div>

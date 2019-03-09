@@ -15,21 +15,37 @@ module.exports = {
 		}
 	},
 	{
+		use: '@gridsome/source-filesystem',
+		options: {
+			path: 'blog/*.md',
+			typeName: 'Post',
+			route: '/blog/:slug'
+		}
+	},
+	{
 		use: '@gridsome/plugin-sitemap',
 		options: {
 			cacheTime: 600000, // default
 			exclude: [],
 			config: {
 				'/about': {
-					changefreq: 'daily',
+					changefreq: 'weekly',
+					priority: 0.7
+				},
+				'/blog': {
+					changefreq: 'weekly',
+					priority: 0.7
+				},
+				'/blog/*': {
+					changefreq: 'weekly',
 					priority: 0.7
 				},
 				'/gallery': {
-					changefreq: 'daily',
+					changefreq: 'weekly',
 					priority: 0.7
 				},
 				'/project': {
-					changefreq: 'daily',
+					changefreq: 'weekly',
 					priority: 0.7
 				}
 			}

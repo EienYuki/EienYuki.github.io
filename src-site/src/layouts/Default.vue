@@ -16,6 +16,8 @@
 					li
 						g-link(class="about" :to="{name: 'about'}") About
 					li
+						g-link(class="blog" :to="{name: 'blog'}") Blog
+					li
 						g-link(class="gallery" :to="{name: 'gallery'}") Gallery
 					li
 						g-link(class="project" :to="{name: 'project'}") Project
@@ -27,7 +29,7 @@
 				
 		footer
 			div(class="text")
-				p Copyright © 2019 by EienYuki.
+				p Copyright © 2019 by {{$static.metaData.siteName}}.
 			div(class="bg")
 		
 </template>
@@ -115,7 +117,7 @@ query {
 				width: 100vw;
 				height: 100%;
 				background-color: $color_nav_sidebar;
-				opacity: .2;
+				opacity: .15;
 			}
 
 			.box {
@@ -126,6 +128,7 @@ query {
 					opacity: .98;
 					h1 {
 						color: snow;
+						text-shadow: 0 0 1px #00000040;
 					}
 				}
 				.icons {
@@ -251,28 +254,32 @@ query {
 					}
 				}
 
-				img {
-					width: 90%;
-					margin-left: 5%;
-					border-radius: 7px;
-
-					&:hover {
-						cursor: pointer;
-					}
-				}
 				a {
 					color: $color_text_title;
 					border-radius: 8px;
 					padding: 1rem 0 0 0;
 					border: 0 solid #ffdcb2;
 					transition: border .2s ease-in-out;
+
 					&:hover {
 						border: 1px solid #ffdcb2;
 					}
-					p {
+
+					img {
+						width: 90%;
+						margin-left: 5%;
+						border-radius: 7px;
+
+						&:hover {
+							cursor: pointer;
+						}
+					}
+					
+					.title {
+						font-size: 1rem;
 						padding: 10px 11% 0px 11%;
 					}
-					p.msg {
+					.msg {
 						color: $color_text_p;
 						padding: 0 11%;
 					}

@@ -3,7 +3,7 @@
 		<div class="row item lightgallery">
 			<a v-for="(item, index) in items" class="col-lg-3 col-md-4" :key="index" :href="require(`!!assets-loader!~/asstes/${item.img}`).src">
 				<g-image :src="require(`!!assets-loader!~/asstes/${item.img}`)" blur="200" :alt="item.text" />
-				<p>{{item.text}}</p>
+				<h3 class="title">{{item.text}}</h3>
 				<p class="msg" v-if="item.msg">{{item.msg}}</p>
 			</a>
 		</div>
