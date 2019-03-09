@@ -2,7 +2,7 @@
 	layout(class="blog_layout")
 		div(class="blog_box")
 			div(class="blog_image")
-				img(:src="$page.post.image")
+				img(:src="require(`!!assets-loader!~/asstes/blog/${$page.post.slug}/${$page.post.image}`).src" :alt="$page.post.title")
 			div(class="blog_title")
 				h1
 					span {{$page.post.title}}
@@ -17,6 +17,7 @@
 <page-query>
 query Post ($path: String!) {
   post: post (path: $path) {
+	slug
     title
 	msg
 	image

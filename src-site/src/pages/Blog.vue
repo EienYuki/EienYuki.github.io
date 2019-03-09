@@ -2,7 +2,7 @@
 	<Layout>
 		<div class="row item">
 			<g-link  class="col-lg-3 col-md-4" :to="{name: 'post', params:{slug: item.node.slug}}" v-for="(item, index) in $page.allPost.edges" :key="index">
-				<img :src="item.node.image" :alt="item.node.title" />
+				<img :src="require(`!!assets-loader!~/asstes/blog/${item.node.slug}/${item.node.image}`).src" :alt="item.node.title" />
 				<h3 class="title">{{item.node.title}}</h3>
 				<p class="msg">{{item.node.msg}}</p>
 			</g-link>
