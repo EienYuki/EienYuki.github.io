@@ -240,7 +240,7 @@ query {
 							.img {
 								position: absolute;
 								width: 70%;
-								top: 50%;
+								top: 40%;
 								left: 60%;
 								transform: translate(-50%, -50%);
 							}

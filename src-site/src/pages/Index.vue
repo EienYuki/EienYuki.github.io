@@ -46,7 +46,8 @@
 					{text: 'NextCloud', msg: '強大的檔案分享系統！', img: 'https://nextcloud.com/wp-content/themes/next/assets/img/common/nextcloud-square-logo.png?x38529', url: 'https://nextcloud.com/'},
 					{text: 'CloudFlare', msg: '好用的CDN服務', img: 'https://www.cloudflare.com/img/cf-facebook-card.png', url: 'https://www.cloudflare.com/'},
 					{text: 'Proxmox VE', msg: '超好用的虛擬機系統', img: 'https://www.unixsamurai.com/wp-content/uploads/2018/06/proxmox-logo.png', url: 'https://www.proxmox.com/'},
-					
+					{text: 'Telegram', msg: '比 LINE 好用太多了', img: 'https://telegram.org/img/t_logo.png', url: 'https://telegram.org/'},
+
 				]
 			}
 		},
